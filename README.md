@@ -1,12 +1,39 @@
-# React + Vite
+# 🛍️ ShopEase – Modern E-Commerce Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+ShopEase is a dynamic e-commerce frontend application built with React. It provides users with a smooth shopping experience featuring seamless navigation, modern UI, and secure login functionality. This project demonstrates core frontend development skills and modern React practices — and acts as a complete frontend foundation for an online shopping platform.
 
-Currently, two official plugins are available:
+- [Live Demo](https://your-live-demo-link.com)
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- **Client-Side Routing with React Router**  
+  Navigate between pages like Home, Products, Cart, and Login without page reloads using `react-router-dom`.
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Modern Data Fetching with React**  
+  Fetch and display real-time product data using clean and efficient API calls.
+
+- **Login Authentication**  
+  Protect key routes and ensure only authenticated users can access certain parts of the app.
+
+- **Styled with Tailwind CSS**  
+  Designed using Tailwind for utility-first, responsive, and modern styling directly within components.
+
+---
+
+## Tech Stack
+
+- React, React Router, Tailwind CSS, Context API, Vite 
+
+---
+
+## Authentication Demo
+
+- Dummy login credentials are accepted (can be integrated with real backends later).
+- Authenticated users get access to protected pages like `Cart`.
+
+---
+
+This project was built as the capstone of my frontend journey and showcases my understanding of component-based architecture, client-side routing, authentication, and clean styling using Tailwind.
+
+---
