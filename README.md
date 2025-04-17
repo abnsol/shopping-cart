@@ -2,7 +2,7 @@
 
 ShopEase is a dynamic e-commerce frontend application built with React. It provides users with a smooth shopping experience featuring seamless navigation, modern UI, and secure login functionality. This project demonstrates core frontend development skills and modern React practices — and acts as a complete frontend foundation for an online shopping platform.
 
-- [Live Demo](https://your-live-demo-link.com)
+- [Live Demo](https://shopease-onlineshopping.vercel.app/)
 ---
 
 ## Features
