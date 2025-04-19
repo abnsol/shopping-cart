@@ -28,7 +28,7 @@ const NavBar = ({ setSelectedCategory }) => {
   };
 
   return (
-    <nav className="py-4 px-5 bg-indigo-600 sticky top-0 z-50">
+    <nav className="py-4 px-5 bg-indigo-600">
       <div className="flex justify-between items-center">
         {/* Logo/Brand */}
         <div className="text-[22px] text-white">
