@@ -59,7 +59,7 @@ const DropDown = ({ setSelectedCategory }) => {
       {/* Dropdown */}
       {showDropdown && (
         <div
-          className={`absolute left-1/2 -translate-x-1/2 mt-2 w-48 top-10 rounded-md shadow-xl bg-white ring-1 ring-gray-200 z-50 max-h-60 overflow-y-auto transform transition-all duration-200 ease-out origin-top ${
+          className={`absolute left-1/2 -translate-x-1/4 mt-2 w-48 top-10 rounded-md shadow-xl bg-white ring-1 ring-gray-200 z-50 max-h-60 overflow-y-auto transform transition-all duration-200 ease-out origin-top ${
             open ? 'opacity-100 scale-100' : 'opacity-0 scale-95 pointer-events-none'
           }`}
         >

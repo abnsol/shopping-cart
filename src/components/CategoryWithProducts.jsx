@@ -1,11 +1,36 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Product from "./Product";
 import { MdNavigateNext } from "react-icons/md";
 import { GrPrevious } from "react-icons/gr";
 
 const CategoryWithProducts = ({ title, id, products }) => {
   const [startIndex, setStartIndex] = useState(0);
-  const visibleCount = 3;
+  const [visibleCount, setVisibleCount] = useState(3);
+
+  useEffect(() => {
+    const handleResize = () => {
+      // Adjust these breakpoints as needed
+      if (window.innerWidth < 640) {
+        setVisibleCount(1);
+      } else if (window.innerWidth < 1024) {
+        setVisibleCount(2);
+      } else {
+        setVisibleCount(3);
+      }
+      
+      // Reset startIndex when visibleCount changes to avoid empty spaces
+      setStartIndex(0);
+    };
+
+    // Set initial value
+    handleResize();
+    
+    // Add event listener
+    window.addEventListener('resize', handleResize);
+    
+    // Cleanup
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   const handlePrev = () => {
     setStartIndex((prev) => Math.max(0, prev - visibleCount));
@@ -37,9 +62,9 @@ const CategoryWithProducts = ({ title, id, products }) => {
 
         {/* Product Container */}
         <div className="flex justify-center">
-          <div className="flex space-x-6  transition-transform duration-300">
+          <div className={`flex ${visibleCount === 1 ? 'space-x-0' : visibleCount === 2 ? 'space-x-4' : 'space-x-6'} transition-transform duration-300`}>
             {visibleProducts.map((product, i) => (
-              <div key={i} className="w-full max-w-[300px] flex-shrink-0">
+              <div key={i} className={`${visibleCount === 1 ? 'w-full' : visibleCount === 2 ? 'w-1/2' : 'w-1/3'} max-w-[300px] flex-shrink-0 px-2`}>
                 <Product product={product} />
               </div>
             ))}
@@ -66,7 +91,7 @@ const CategoryWithProducts = ({ title, id, products }) => {
           <span
             key={index}
             className={`w-2 h-2 rounded-full transition-all duration-300 ${
-              index === Math.ceil(startIndex / visibleCount)
+              index === Math.floor(startIndex / visibleCount)
                 ? "bg-indigo-600 scale-110"
                 : "bg-gray-300"
             }`}
